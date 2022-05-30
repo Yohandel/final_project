@@ -1,0 +1,8 @@
+{
+    "incomes": [
+      { "id": 1, "income": 3000, "date": "05/30/2022" }
+    ],
+    "expensens": [
+      { "id": 1, "expense": 2000, "date": "03/30/2022" }
+    ]
+  }
