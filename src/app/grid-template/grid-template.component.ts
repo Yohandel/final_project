@@ -18,6 +18,7 @@ export class GridTemplateComponent implements OnInit, OnChanges {
   @Input() fecha: string = "";
   @Input() monto: number = 0;
   @Input() montoTot: number = 0
+  @Input() type: number = 0
   @Output() getData =  new EventEmitter<boolean>()
   @Input() titleTot: string = "Total";
   filterInp: string = ""
@@ -62,7 +63,7 @@ export class GridTemplateComponent implements OnInit, OnChanges {
   openModalBills() {
     this.dialog.open(AddModalComponent, {
       data: {
-        type: 2,
+        type: this.type,
         title: this.title
       }
     })

@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "backend": "json-server --watch ./src/app/data/backend/db.json"
+    "backend": "json-server --watch https://budget-calculator-back.herokuapp.com/"
   },
   "private": true,
   "dependencies": {

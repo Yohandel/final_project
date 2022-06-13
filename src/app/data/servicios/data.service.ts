@@ -6,24 +6,21 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class DataService {
-
+  apiUrl:string = 'https://budget-calculator-back.herokuapp.com'
   constructor( private http: HttpClient) { }
 
 
   getData(){
-    let url = 'http://localhost:3000/data';
-     return this.http.get<Budget[]>(url)
+     return this.http.get<Budget[]>(`${this.apiUrl}/data`)
   }
 
   setData(budget:Budget): Observable<any>{
-    let url = 'http://localhost:3000';
-    return this.http.post(`${url}/data`, budget)
+    return this.http.post(`${this.apiUrl}/data`, budget)
    
   }
 
   deleteData(id:number){
-    let url = 'http://localhost:3000';
-    return this.http.delete(`${url}/data/${id}`)
+    return this.http.delete(`${this.apiUrl}/data/${id}`)
   }
 
   

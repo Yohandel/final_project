@@ -4,7 +4,8 @@
       <input type="string" class="form-control" name="search" (keyup)="filter()" [(ngModel)]="filterInp">
     </div>
     <div class="col-md-6" *ngIf="title !== 'Lista de Gastos y Ingresos'">
-      <div class="btn btn-success btn-add" (click)="openModalBills()" style="background: rgb(0, 111, 130); border: 0px;">
+      <div class="btn btn-success btn-add" (click)="openModalBills()"
+        style="background: rgb(0, 111, 130); border: 0px;">
         ➕ Agregar {{title}}
       </div>
     </div>
