@@ -4,6 +4,8 @@ import { DataService } from '../data/servicios/data.service';
 import { Budget } from '../models/budget';
 import Swal from 'sweetalert2';
 import { ToastrService } from 'ngx-toastr';
+import { MatDialog } from '@angular/material/dialog';
+import { AddModalComponent } from '../components/add-modal/add-modal.component';
 
 @Component({
   selector: 'tabla-template',
@@ -26,7 +28,7 @@ export class GridTemplateComponent implements OnInit, OnChanges {
   public pageSliceCopy: Budget[] = [];
 
 
-  constructor(private _dataService: DataService, private _toastSrv: ToastrService,) { }
+  constructor(private _dataService: DataService, private _toastSrv: ToastrService, private dialog: MatDialog) { }
 
 
   ngOnInit(): void {
@@ -55,6 +57,21 @@ export class GridTemplateComponent implements OnInit, OnChanges {
     }
     this.pageSlice = this.data.slice(startIndex, this.endIndex)
 
+  }
+
+  openModalBills() {
+    this.dialog.open(AddModalComponent, {
+      data: {
+        type: 2,
+        title: this.title
+      }
+    })
+      .afterClosed().subscribe(data => {
+        if (data?.created) {
+          this.getData.emit(true)
+        }
+      })
+      ;
   }
 
   deleteBudgetElement(budgetId:number){

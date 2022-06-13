@@ -11,7 +11,7 @@ import { Budget } from '../models/budget';
 })
 export class BillsComponent implements OnInit {
 
-  title = "Lista de Gastos"
+  title = "Gastos"
   inpSearch: any;
   totBills: number = 0
   billsCopy: Budget[] = []

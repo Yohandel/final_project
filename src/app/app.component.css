@@ -7,17 +7,6 @@
 .header{    
     border-radius: 0px;
     background: #f4f0f0;
-    box-shadow:  41px 41px 73px #d4d1d1,
-                 -41px -41px 73px #ffffff;
-}
-
-.logo-container{
-    height: 3rem;
-    width: 3.5em;
-    border-radius: 205px;
-    background: #f4f0f0;
-    box-shadow: inset 7px 7px 13px #c8c5c5,
-            inset -7px -7px 13px #ffffff;
 }
 
 
@@ -34,7 +23,7 @@ body{
 }
 
 .nav-link.active{
-    color: indigo !important;
+    color: rgb(0, 111, 130) !important;
 }
 
 /*footer*/

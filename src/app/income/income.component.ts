@@ -10,7 +10,7 @@ import { Budget } from '../models/budget';
   styleUrls: ['./income.component.css']
 })
 export class IncomeComponent implements OnInit {
-  title = "Lista de Ingresos"
+  title = "Ingresos"
 
   constructor(private dialogIncome: MatDialog,
     private data: DataService) { }

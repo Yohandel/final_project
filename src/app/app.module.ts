@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import {MatDialogModule} from '@angular/material/dialog';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
 import { BillsComponent } from './bills/bills.component';
 import { IncomeComponent } from './income/income.component';
 import { IncomeBllsComponent } from './income-blls/income-blls.component';
@@ -20,7 +19,6 @@ import { AddModalComponent } from './components/add-modal/add-modal.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     BillsComponent,
     IncomeComponent,
     IncomeBllsComponent,
